@@ -1,0 +1,73 @@
+{
+  "app": {
+    "name": "Mayorista de Sistemas",
+    "version": "1.0.0",
+    "mode": "production"
+  },
+  "database": {
+    "enabled": false,
+    "mode": "edge_function",
+    "connection": {
+      "host": "",
+      "port": 3306,
+      "database": "",
+      "user": "",
+      "password": ""
+    },
+    "edgeFunction": {
+      "enabled": true,
+      "functionName": "mysql_bd_mayorista"
+    }
+  },
+  "cache": {
+    "enabled": true,
+    "ttl": 3600000,
+    "maxSize": 100
+  },
+  "offline": {
+    "enabled": true,
+    "syncInterval": 300000
+  },
+  "apis": {
+    "syscom": {
+      "enabled": false,
+      "client_id": "",
+      "client_secret": "",
+      "base_url": "https://developers.syscom.mx/api/v1"
+    },
+    "tecnosinergia": {
+      "enabled": false,
+      "api_token": "",
+      "base_url": "https://api.tecnosinergia.info/v3"
+    }
+  },
+  "payment": {
+    "mercadopago": {
+      "enabled": false,
+      "mode": "test"
+    },
+    "stripe": {
+      "enabled": false,
+      "mode": "test"
+    },
+    "paypal": {
+      "enabled": false,
+      "mode": "sandbox"
+    }
+  },
+  "notifications": {
+    "whatsapp": {
+      "enabled": false
+    },
+    "telegram": {
+      "enabled": false
+    }
+  },
+  "exchangeRate": {
+    "USD": 17.5,
+    "MXN": 1
+  },
+  "markup": {
+    "default": 20
+  }
+}
